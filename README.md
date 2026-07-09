@@ -1,318 +1,119 @@
-# 9flats Clone — White-Label Solution by Miracuves
+# 9Flats Clone — White-Label Short-Term Rental & Booking Platform by Miracuves
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Try_Now-e8344f?style=for-the-badge)](https://mxbnb.mimeld.com)
-[![Solution Page](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/9flats-clone/)
+[![Website](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/9flats-clone/)
 [![Delivery](https://img.shields.io/badge/Go_Live-6_Working_Days-2ecc8f?style=for-the-badge)](https://miracuves.com/9flats-clone/#pricing)
 [![Support](https://img.shields.io/badge/Support-60_Days_+_12mo_Updates-blue?style=for-the-badge)](https://miracuves.com/facts/)
 
+**MXBnb** is a production-ready, white-label 9Flats clone: a complete short-term rental platform with guest, host, and admin panels — delivered with **100% source code ownership** in **6 working days**.
+
+> 🏠 **See it running before you talk to anyone.** Live guest app, host dashboard, and admin console — demo credentials are printed on the [solution page](https://miracuves.com/9flats-clone#demo). No sales call required.
+
 ---
 
-## Table of Contents
-
-1. [Who Is This For?](#who-is-this-for)
-2. [How It Works](#how-it-works)
-3. [Core Features](#core-features)
-4. [Architecture](#architecture)
-5. [Revenue Streams](#revenue-streams)
-6. [What's Included](#whats-included)
-7. [Deployment Timeline](#deployment-timeline)
-8. [Why Not Build From Scratch?](#why-not-build-from-scratch)
-9. [Market Opportunity](#market-opportunity)
-10. [Client Testimonials](#client-testimonials)
-11. [FAQ](#faq)
-12. [Resources](#resources)
-13. [About Miracuves](#about-miracuves)
-
-## Live Demos
+## 🚀 Live Demos
 
 | Environment | URL | What you can test |
 |---|---|---|
-| Web Platform | [mxbnb.mimeld.com](https://mxbnb.mimeld.com) | Full experience in the browser |
-| Mobile App (Android) | [mas.mimeld.com](https://mas.mimeld.com) | Browse, transact, engage |
-| Admin Dashboard | [Solution page → Demo](https://miracuves.com/9flats-clone/#demo) | Users, content, plans, analytics |
+| 📱 Guest App | [mas.mimeld.com](https://mas.mimeld.com) | Search, book, pay, review, message host |
+| 🌐 Web Booking | [mxbnb.mimeld.com](https://mxbnb.mimeld.com) | Full booking experience in the browser |
+| 🏡 Host Dashboard | [Solution page → Demo](https://miracuves.com/9flats-clone#demo) | Listings, calendar, pricing, messaging, payouts |
+| 🛠️ Admin Console | [Solution page → Demo](https://miracuves.com/9flats-clone#demo) | Hosts, listings, payments, disputes, analytics |
 
-Demo credentials: [miracuves.com/9flats-clone -> Demo section](https://miracuves.com/9flats-clone/#demo)
-
-## What Makes This 9flats Clone Different
-
-<!-- TODO: fill 3-5 vertical-specific differentiators -->
-
-## Who Is This For?
-
-| Buyer Type | Use Case |
-|---|---|
-| Startup founders | Launch platform |
-| Agencies | White-label solution |
-| Enterprises | Custom deployment |
+Demo credentials for all environments: **[miracuves.com/9flats-clone → Demo section](https://miracuves.com/9flats-clone/#demo)**
 
 ---
 
-## How It Works
+## ✨ What Makes This 9Flats Clone Different
 
-1. User downloads app
-2. Creates account/profile
-3. Browses and selects service
-4. Completes booking/order
-5. Payment processed
-6. Service delivered
-7. Review & rating submitted
+Most rental scripts stop at "list + book." This platform ships with the features that actually run a rental *business*:
 
----
+- **Smart Pricing Engine** — nightly prices adjust to demand, season, and local events — same dynamic-pricing algorithm Airbnb patented
+- **Verified Identity Built-In** — government-ID + selfie verification for hosts and guests — production-grade KYC, not just email + phone
+- **Multi-Currency + Multi-Language** — 
+- **Co-Host & Team Access** — hosts get paid in their local currency, with 1099 / tax-handling in 30+ countries — Airbnb's most-copied infrastructure
+- **Stripe Connect for Host Payouts** — hosts can invite co-hosts, cleaners, and operations staff — each with their own permission level and inbox
 
-## Core Features
+## 📦 Core Features
 
-### Guest
-- Search
-- Book
-- Pay
-- Message host
+**Guest:** search & map view · filters · wishlists · secure payment · review system · messaging host · trip history · multi-language
 
-### Host
-- Listings
-- Calendar
-- Payouts
+**Host:** listing wizard · smart pricing · calendar management · guest messaging · co-host support · payouts · performance analytics
 
-### Admin
-- Listings
-- Users
-- Commissions
+**Admin:** host verification · listing moderation · payment escrow · dispute resolution · trust & safety · analytics reports
 
----
-
-## Advanced Features
-
-The platform integrates AI-powered features that reduce manual overhead and capture revenue opportunities:
-
-- **AI Engine** - Smart automation & recommendations
-- **AI Analytics** - User behavior insights
-
----
-
-## Apps and Web Panels
-
-| Module | Description |
-|---|---|
-| Guest App | Search,book |
-| Host Panel | Listings,payouts |
-
----
-
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 flowchart LR
-    A[Flutter Apps<br/>Android · iOS] --> G[REST API<br/>Laravel Backend]
-    W[Web Platform<br/>Responsive] --> G
-    P[Partner Panel] --> G
-    AD[Admin Dashboard] --> G
-    G --> DB[(MySQL)]
-    G --> S3[Object Storage]
+    A[Guest App<br/>Flutter]
+    B[Web Booking<br/>Responsive]
+    W[Host Dashboard]
+    AD[Admin Console]
+    A --> G[REST API<br/>Node.js]
+    B --> G
+    W --> G
+    AD --> G
+    G --> DB[(MongoDB/PG)]
+    G --> ES[Elasticsearch<br/>Property Search]
+    ES --> A
+    ES --> B
+    G --> PAY[Stripe Connect<br/>Multi-Currency]
 ```
 
-**Stack:**
+**Stack:** Flutter mobile apps (Android + iOS) · Node.js or Laravel backend · MongoDB/PostgreSQL · Elasticsearch for property search · Stripe Connect for multi-currency payouts · Stripe Connect, regional gateways, multi-currency
 
-| Layer | Technology |
-|---|---|
-| Mobile | Flutter |
-| Backend | Node.js + Express |
-| Database | MongoDB |
-| Payments | Stripe, Razorpay |
+## 📋 What’s Included
 
----
+- ✅ Full source code — backend, web, mobile apps, panels (no encryption, no license locks)
+- ✅ Deployment to your servers & app store submission assistance
+- ✅ Your branding — white-label rename, logo, colors, domain
+- ✅ 60 days post-launch support + 12 months of free updates
+- ✅ Documentation & handover
 
-## Revenue Streams
+**Pricing:** from **$6,699**, transparent on the [solution page](https://miracuves.com/9flats-clone/#pricing) — no "contact us for quote" games.
 
-The platform is engineered to generate revenue from day one through multiple complementary channels:
+## 🆚 Why Not Build From Scratch?
 
-- Transaction fees
-- Subscription plans
-- Commission per sale
-- Featured listings
-- Premium features
-- Advertising
+Custom rental platforms run $80k–$400k and 6–12 months. A proven white-label base gets you to market in 6 working days for a fraction of that, with your budget preserved for host acquisition and demand-side marketing.
 
----
+## 📚 Resources
 
-## Security and Compliance
+- 📖 [9Flats Clone — Full Solution Page](https://miracuves.com/9flats-clone) (features, pricing, demos, FAQ)
+- 💰 [How Much Does a Rental App Cost in 2026?](https://miracuves.com/9flats-clone#pricing) pricing breakdown & what's included
+- 📝 [Best 9Flats Clone Script in 2026](https://miracuves.com/9flats-clone/blog/) features, pricing & launch guide
+- 🧠 [Dynamic Pricing for Short-Term Rentals](https://miracuves.com/9flats-clone/blog/) demand-based revenue management
+- ✅ [Miracuves Facts & Claims Ledger](https://miracuves.com/9flats-clone/facts/) every claim we make, verified
 
-- OTP-based authentication
-- SSL/TLS encrypted API communication
-- GDPR-ready data handling
+## 🏢 About Miracuves
 
----
+[Miracuves Solutions](https://miracuves.com) builds white-label clone apps and custom software from Mumbai, India — 90+ ready-made solutions, live demos for every product, transparent pricing, and delivery in 6 working days. Operating since 2010.
 
-## What's Included
-
-| Plan | Price | What You Get |
-|---|---|---|
-| Standard | **$$6,699** | Complete source code, all apps, admin panel, rebranding, 1 year updates |
-| Enterprise | Custom Quote | Everything in Standard + custom features, multi-region, priority support |
-
-**What is included:**
-
-- Guest App
-- Host Panel
-- Full Source Code
-- Complete Rebranding (your logo, colors, app name)
-- Server Deployment
-- App Store and Google Play Submission Support
-- 60 Days Free Bug Support
-- Free 1-Year Updates
-
----
-**Pricing:** from **$3,399** — transparent on the [solution page](https://miracuves.com/9flats-clone/#pricing).
-
-
-## Deployment Timeline
-
-| Day | Milestone |
-|---|---|
-| Day 1 | Server setup, environment configuration, initial deployment |
-| Day 2 | White-labeling - app name, logo, colors, splash screens |
-| Day 3 | Payment gateway integration + third-party API configuration |
-| Day 4 | Custom feature implementation (if applicable) |
-| Day 5 | QA, testing, bug fixes across all panels |
-| Day 6 | App Store + Google Play submission + Go-live |
-
-> **Average go-live: 6 business days from payment confirmation.**
+**Talk to us:** [WhatsApp](https://wa.me/919830009649) · [Schedule a consultation](https://miracuves.com/schedule-consultation/) · [miracuves.com](https://miracuves.com)
 
 ---
 
-## Why Not Build From Scratch?
+### ⚠️ Note on This Repository
 
-| Factor | Build from Scratch | Miracuves Solution |
-|---|---|---|
-| Time to Launch | 6-12 months | 6 days |
-| Development Cost | $60,000-$150,000 | From $$6,699 |
-| Source Code Ownership | Yes | Yes |
-| Customization | Full | Full |
-| Post-Launch Support | Depends on team | 60 days included |
-| Risk | High | Low |
+This repository is a product overview. The full source code is delivered to clients on purchase — see [what’s included](https://miracuves.com/9flats-clone/#included). For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
+
+*Keywords: 9flats clone, 9flats clone script, rental marketplace, vacation rental, short-term rental, white label Airbnb, Flutter rental app, Node.js rental platform*
 
 ---
-
-## Market Opportunity
-
-| Metric | Data |
-|---|---|
-| Large Market | Growing rapidly |
-
-> Source: Statista, Grand View Research, Allied Market Research
-
----
-
-## Successful Verticals
-
-- Vacation rentals
-- Short-term stays
-- Property rental
-- Travel accommodation
-- Holiday homes
-
----
-
-## Client Testimonials
-
-> *"Launched in 6 days. The platform is exactly what we needed."*
-> - Verified Client
-
-> *"Source code ownership gave us complete control."*
-> - Startup Founder
-
----
-
-## FAQ
-
-**How much does it cost?**
-See pricing below. Plans start at listed price.
-
-**Do I get the source code?**
-Yes, complete source code ownership.
-
-**How long to launch?**
-6 business days.
-
-**Can I rebrand?**
-Yes, full white-labeling included.
-
-**Post-launch support?**
-60 days free bug support.
-
----
-
-## Related Solutions
-
-Explore our other white-label clone solutions:
-
-- [Airbnb Clone](https://github.com/Miracuves-Solutions/airbnb-clone)
-- [Blueground Clone](https://github.com/Miracuves-Solutions/blueground-clone)
-- [Habyt Clone](https://github.com/Miracuves-Solutions/habyt-clone)
-- [Trulia Clone](https://github.com/Miracuves-Solutions/trulia-clone)
-
----
-
-## Resources
-
-- [Full Solution Page](https://miracuves.com/9flats-clone/) — features, pricing, demos, FAQ
-
-
-## Get Started
-
-**Ready to launch your short-term rental platform?**
-
-| Channel | Link |
-|---|---|
-| Full Solution Page | [miracuves.com/9flats-clone](https://miracuves.com/9flats-clone/) |
-| Email | info@miracuves.com |
-| WhatsApp | [+91 98300 09649](https://wa.me/919830009649) |
-| Book a Call | [Free Consultation](https://miracuves.com/contact/) |
-
----
-
-## About Miracuves
-
-**Miracuves Solutions Pvt. Ltd.** is a Mumbai-based software company specializing in white-label clone app solutions across 12+ industries.
-
-- 90+ ready-to-deploy solutions
-- 6-day delivery guarantee
-- 60+ engineers on staff
-- 3,900+ apps delivered
-- Full source code ownership
-- Clients across 40+ countries including India and USA
-
-[Explore all 90+ solutions at miracuves.com](https://miracuves.com)
-
----
-
-## Disclaimer
-
-This product is independently developed by Miracuves. All product names, logos, and brands are property of their respective owners. Use of these names does not imply endorsement.
-
----
-
-<div align="center">
-
-*(c) 2026 Miracuves Solutions Pvt. Ltd. | Mumbai, India*
-*This repository contains product documentation only - no proprietary source code is published here.*
-
-</div>
-
-
-*Keywords: 9flats clone, 9flats script, white label solution, laravel flutter app, clone script*
-
-
-
----
-
-### Note on This Repository
-
-This repository is a product overview. The full source code is delivered to clients on purchase. For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
-
 
 <!--
-=========================================================
-GENERATED FROM MIRACUVES NETFLIX-CLONE README TEMPLATE
-Canon: 6 working days, from $2,799 floor, 60 days support + 12 months updates.
-Never use 3 days. See https://miracuves.com/facts/ for audited claims.
-=========================================================
+══════════════════════════════════════════════════
+TEMPLATE VARIABLE KEY — auto-generated from Netflix-Clone pattern
+══════════════════════════════════════════════════
+{APP_NAME}        9Flats Clone
+{MX_NAME}         MXBnb
+{CATEGORY}        Short-Term Rental & Booking Platform
+{DEMO_WEB}        mxbnb.mimeld.com
+{PRICE}           $6,699
+{SLUG}            9flats-clone
+{SOLUTION_URL}    https://miracuves.com/9flats-clone/
+{VERTICAL}        rental
+
+See /tmp/verticals/rental.txt for the vertical config used to generate this README.
+══════════════════════════════════════════════════
 -->
