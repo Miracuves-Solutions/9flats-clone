@@ -71,7 +71,7 @@ flowchart LR
 - ✅ 60 days post-launch support + 12 months of free updates
 - ✅ Documentation & handover
 
-**Pricing:** from **$6,699**, transparent on the [solution page](https://miracuves.com/9flats-clone/#pricing) — no "contact us for quote" games.
+**Pricing:** from **$3,399**, transparent on the [solution page](https://miracuves.com/9flats-clone/#pricing) — no "contact us for quote" games.
 
 ## 🆚 Why Not Build From Scratch?
 
@@ -109,7 +109,7 @@ TEMPLATE VARIABLE KEY — auto-generated from Netflix-Clone pattern
 {MX_NAME}         MXBnb
 {CATEGORY}        Short-Term Rental & Booking Platform
 {DEMO_WEB}        mxbnb.mimeld.com
-{PRICE}           $6,699
+{PRICE}           $3,399
 {SLUG}            9flats-clone
 {SOLUTION_URL}    https://miracuves.com/9flats-clone/
 {VERTICAL}        rental
